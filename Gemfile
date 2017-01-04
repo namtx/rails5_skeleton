@@ -43,8 +43,16 @@ group :development, :test do
   gem 'faker'
   gem 'pry'
   gem 'database_cleaner'
+  gem 'brakeman', require: false
+  gem 'jshint'
+  gem 'bundler-audit'
   gem 'rubocop', '~> 0.35.0', require: false
   gem 'rubocop-checkstyle_formatter', require: false
+  gem 'scss_lint'
+  gem 'scss_lint_reporter_checkstyle', require: false
+  gem 'eslint-rails'
+  gem 'rails_best_practices'
+  gem 'reek'
 end
 
 group :development do
@@ -54,12 +62,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'brakeman'
 end
 
 group :test do
   gem 'simplecov', require: false
   gem 'simplecov-rcov', require: false
+  gem 'simplecov-json'
   gem 'shoulda-matchers'
 end
 
@@ -85,15 +93,15 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'sidekiq'
 gem 'sidekiq-cron'
-gem 'redis-rack', github: 'redis-store/redis-rack', branch: 'master'
-gem 'redis-actionpack', github: 'redis-store/redis-actionpack', branch: 'master'
-gem 'redis-rails', github: 'redis-store/redis-rails', branch: 'master'
+gem 'redis-rack', git: 'https://github.com/redis-store/redis-rack.git', branch: 'master'
+gem 'redis-actionpack', git: 'https://github.com/redis-store/redis-actionpack.git', branch: 'master'
+gem 'redis-rails', git: 'https://github.com/redis-store/redis-rails.git', branch: 'master'
 gem 'redis-namespace'
-gem 'sinatra', github: 'sinatra'
+gem 'sinatra', git: 'https://github.com/sinatra/sinatra.git'
 gem 'figaro'
 gem 'slim'
 gem 'cancancan'
-gem 'paranoia', github: 'rubysherpas/paranoia', branch: 'rails4'
+gem 'paranoia', git: 'https://github.com/rubysherpas/paranoia.git', branch: 'rails4'
 gem 'ransack'
 gem 'state_machines-activerecord'
 gem 'carrierwave'
