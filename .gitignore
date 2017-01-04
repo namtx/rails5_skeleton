@@ -62,3 +62,8 @@ bower.json
 # Ignore redis binary dump (dump.rdb) files
 *.rdb
 !.rubocop*
+
+# FramgiaCI
+!.drone.yml
+!.framgia-ci.yml
+.framgia-ci-reports/
