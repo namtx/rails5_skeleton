@@ -18,9 +18,17 @@ require "database_cleaner"
 require "devise"
 require "shoulda/matchers"
 require "simplecov"
+require "simplecov-json"
 require "simplecov-rcov"
-SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-SimpleCov.start "rails"
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::JSONFormatter,
+  SimpleCov::Formatter::RcovFormatter,
+]
+SimpleCov.start do
+  coverage_dir ".framgia-ci-reports/coverage"
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
