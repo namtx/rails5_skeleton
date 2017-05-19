@@ -14,7 +14,7 @@ else
   raise "Please set $DEPLOY_REF"
 end
 
-set :rvm_ruby_version, "2.3.1"
+set :rvm_ruby_version, "2.4.1"
 set :deploy_to, "/usr/local/rails_apps/#{fetch :application}"
 case ENV["WEB_SERVER"]
 when "passenger"
