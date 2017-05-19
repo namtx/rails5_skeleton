@@ -1,4 +1,4 @@
-FROM ruby:2.3.1
+FROM ruby:2.4.1
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && apt-get install -y nodejs && npm install -g gulp-cli bower eslint babel-eslint eslint-plugin-angular
 
