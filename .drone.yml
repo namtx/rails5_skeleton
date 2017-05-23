@@ -36,3 +36,16 @@ compose:
 cache:
   mount:
     - .git
+
+deploy:
+  ssh:
+    host: 10.0.1.30
+    user: deploy
+    port: 22
+    commands:
+      - export PATH="$PATH:$HOME/.rvm/bin:$HOME/deploy_bin"
+      - source /home/deploy/.bash_profile
+      - source /home/deploy/.env
+      - localdeploy branch master
+    when:
+      branch: master
