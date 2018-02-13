@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'nokogiri', '~> 1.7.1'
+gem 'nokogiri', '~> 1.8.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,7 +44,7 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'jshint'
   gem 'bundler-audit'
-  gem 'rubocop', '~> 0.35.0', require: false
+  gem 'rubocop', '~> 0.52.1', require: false
   gem 'rubocop-checkstyle_formatter', require: false
   gem 'scss_lint'
   gem 'scss_lint_reporter_checkstyle', require: false
@@ -104,6 +104,6 @@ gem 'ransack'
 gem 'state_machines-activerecord'
 gem 'carrierwave'
 gem 'fog'
-gem 'aws-sdk', '~> 1.66.0'
+gem 'aws-sdk', '~> 2'
 gem 'capistrano-faster-assets'
 gem "rack-cors", :require => "rack/cors"

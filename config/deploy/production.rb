@@ -1,11 +1,13 @@
 if ENV["LOCAL_DEPLOY"]
   server "localhost", user: "deploy", roles: %w(app db)
 else
-  require_relative "elb"
-  servers = get_ec2_targets ENV["AWS_ELB_NAME"], ENV["AWS_REGION"]
-  servers.each_with_index do |sv, i|
-    roles = ["app"]
-    roles << "db" if i == 0
-    server sv, user: "deploy", roles: roles
+  instances = fetch(:instances)
+
+  instances.each do |role_name, hosts|
+    roles = [role_name]
+    hosts.each_with_index do |host, i|
+      roles << "db" if i == 0
+      server host, user: "deploy", roles: roles
+    end
   end
 end
