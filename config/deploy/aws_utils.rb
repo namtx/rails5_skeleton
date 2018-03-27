@@ -6,7 +6,7 @@ def get_ec2_targets
   targets = {}
   @instance_name_tags.each do |role_name, tag_name|
     targets[role_name] = @ec2.describe_instances(filters:[{ name: "tag:Name", values: [tag_name] }]).reservations
-      .map(&:instances).flatten.compact.map(&:private_ip_address)
+      .map(&:instances).flatten.map(&:private_ip_address).compact
   end
   targets
 end

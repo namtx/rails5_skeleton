@@ -47,14 +47,14 @@ GIT
 
 GIT
   remote: https://github.com/sinatra/sinatra.git
-  revision: ec08e37bf8b4d1bbb6f28cc3eaf37eea172dc08f
+  revision: 44660b99a010c3b70d237bbd0dedb95cb739089d
   specs:
-    rack-protection (2.0.0)
+    rack-protection (2.0.1)
       rack
-    sinatra (2.0.0)
+    sinatra (2.0.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.0)
+      rack-protection (= 2.0.1)
       tilt (~> 2.0)
 
 GEM
@@ -400,7 +400,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    loofah (2.2.0)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.12)
@@ -413,7 +413,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.12.1)
-    mustermann (1.0.0)
+    mustermann (1.0.2)
     mysql2 (0.4.6)
     nenv (0.3.0)
     net-scp (1.2.1)
@@ -458,8 +458,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     rails_best_practices (1.18.1)
       activesupport
       code_analyzer (>= 0.4.3)
@@ -609,7 +609,7 @@ GEM
       ref
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     trollop (2.1.2)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
