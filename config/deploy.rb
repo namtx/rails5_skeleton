@@ -90,5 +90,5 @@ namespace :deploy do
       end
     end
   end
-  after :restart, :update_ec2_tags
+  # after :restart, :update_ec2_tags
 end
